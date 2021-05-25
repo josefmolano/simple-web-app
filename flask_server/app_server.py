@@ -8,7 +8,7 @@ CORS(app)
 def prueba1():
 	return jsonify({'hola': 'mundo'}), 200
 
-@app.route('/api/prueba2/num', methods=['GET'])
+@app.route('/api/prueba2/<num>', methods=['GET'])
 def prueba2(num):
 	return jsonify({'respuesta': int(num)**2}), 200
 
